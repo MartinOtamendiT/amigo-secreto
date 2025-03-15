@@ -20,15 +20,21 @@ function sortearAmigo(){
     let amigoSorteado = Math.floor(Math.random() * listaAmigos.length);
 
     resultadoSorteo.innerHTML = `<li>El amigo secreto sorteado es: ${listaAmigos[amigoSorteado]}.</li>`;
-    actualizarContenidoLista('');
+}
 
-    console.log(listaAmigos[amigoSorteado])
+//Función que reinicia el sorteo.
+function reiniciarSorteo(){
+    let resultadoSorteo = document.querySelector('#resultado');
+    
+    listaAmigos = [];
+    actualizarContenidoLista(''); 
+    resultadoSorteo.innerHTML = '';
 }
 
 //Función que actualiza el contenido de la lista que se verá en pantalla.
 function actualizarContenidoLista(elementoLista){
     let listaVisibleHTML = document.querySelector('#listaAmigos');
-    
+
     if(elementoLista == ''){
         contenidoLista = '';  
     }else{
