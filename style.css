@@ -1,7 +1,7 @@
 :root {
-    --color-primary: #205781;
-    --color-secondary: #4F959D;
-    --color-tertiary: #98D2C0;
+    --color-primary: #092635;
+    --color-secondary: #1B4242;
+    --color-tertiary: #5C8374;
     --color-button: #fe652b;
     --color-button-hover: #e55720;
     --color-text: #444444;
@@ -18,9 +18,15 @@
 body {
     height: 100vh;
     background-color: var(--color-primary);
+    background-image: url("./assets/stars.gif");
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .main-content {
@@ -37,11 +43,20 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem 0 0;
+    flex-wrap: wrap;
+}
+
+.header-banner h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.header-banner img{
+    width: 15rem;
 }
 
 /* Sección de entrada */
 .input-section {
-    flex: 60%;
     background-color: var(--color-secondary);
     border: 1px solid #000;
     border-radius: 4rem 4rem 0 0;
@@ -65,7 +80,7 @@ body {
     font-family: "Inter", serif;
     font-size: 2.1rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-white);
     margin: 0.6rem 0;
     text-align: center;
 }
@@ -140,7 +155,7 @@ ul {
 }
 
 .name-list li{
-    background-color: #FFAB5B;
+    background-color: #D95F59;
     border-color: #FFF2DB;
     border-radius: 2rem;
     color: var(--color-white);
@@ -158,13 +173,15 @@ ul {
 .button-container{
     display: flex;
     gap: 1rem;
+    width: auto;
+    flex-wrap: wrap;
 }
 
 /* Botón de sortear título */
 .button-draw {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 10rem;
     padding: 0.8rem 2.5rem;
     color: var(--color-white);
     background-color: var(--color-button);
@@ -173,7 +190,7 @@ ul {
 
 .button-draw img {
     margin-right: 1rem;
-    width: 2rem;
+    width: 40%;
 }
 
 .button-draw:hover {

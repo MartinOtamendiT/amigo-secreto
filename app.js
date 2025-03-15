@@ -17,9 +17,13 @@ function agregarAmigo(){
 //Función que sortea un amigo de la lista y lo muestra en pantalla.
 function sortearAmigo(){
     let resultadoSorteo = document.querySelector('#resultado');
-    let amigoSorteado = Math.floor(Math.random() * listaAmigos.length);
 
-    resultadoSorteo.innerHTML = `<li>El amigo secreto sorteado es: ${listaAmigos[amigoSorteado]}.</li>`;
+    if(listaAmigos.length==0){
+        alert('Lista de amigos vacía =(');
+    }else{
+        let amigoSorteado = Math.floor(Math.random() * listaAmigos.length);
+        resultadoSorteo.innerHTML = `<li>El amigo secreto sorteado es: ${listaAmigos[amigoSorteado]}.</li>`;
+    }
 }
 
 //Función que reinicia el sorteo.
